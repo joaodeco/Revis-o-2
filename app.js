@@ -17,23 +17,44 @@ function menu(){
     let opcao = prompt('Qual sua opção? ')
 
     switch(opcao){
-        case 1: 
-            listar(residencias)
+        case '1': 
+            listar()
             menu()
             break
-        case 2:
-            adicionar(residencias)
+        case '2':
+            adicionar()
+            const bairro = prompt('Bairro: ');
+            const rua = prompt('Rua: ');
+            const  numero= prompt('Número: ');
+            adicionarContato({bairro, rua, numero});
+            console.log('Residencia adicionada com sucesso!');
             menu()
             break
-        case 3:
-            remover(residencias)
-            menu()
+        case '3':
+            remover()
+            listar()
+            index = parseInt(prompt('Número da residencia que deseja remover: ')) - 1;
+            remover(index);
+            console.log('Residencia removida com sucesso!');
             break
-        case 4:
+        case '4':
             atualizar()
+            listar();
+            index = parseInt(prompt('Número da residencia atualizar: ')) - 1;
+            const novoBairro = prompt('Novo nome: ');
+            const novaRua = prompt('Novo telefone: ');
+            const novoNumero = prompt('Novo email: ');
+            atualizar(index, { bairro: novoBairro, rua:novaRua, numero: novoNumero });
+            console.log('Residencia atualizada com sucesso!');
             menu()
             break   
-        case 5:
+        case '5':
+            console.log('Saindo')
+            return
+            break
+        default:
+            console.log('Opção invalida tente novamente!')
+            menu()
             break
     }
 }
