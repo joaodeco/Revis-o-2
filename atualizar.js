@@ -1,8 +1,7 @@
 const { listar } = require("./listar");
-const prompt = require('prompt-sync')()
 
-function editar(){
-    listar()
-    
-
+function editar(index, novaResidencia){
+    contatos[index] = novaResidencia
 }
+
+module.exports = { editar }

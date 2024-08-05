@@ -1,7 +1,8 @@
 const prompt = require ('prompt-sync')();
-const residencias = require('./residencias')
+let residencias = require('./residencias')
 const listar = require('./listar')
 const adicionar = require('./adicionar')
+const remover = require('./remover')
 
 menu()
 function menu(){
@@ -21,11 +22,11 @@ function menu(){
             menu()
             break
         case 2:
-            adicionar( vetor )
+            adicionar(residencias)
             menu()
             break
         case 3:
-            remover()
+            remover(residencias)
             menu()
             break
         case 4:
