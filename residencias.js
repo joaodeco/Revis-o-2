@@ -4,5 +4,4 @@ let residencias = [
     {bairro: 'Cará-Cará', rua: 'Dourado', numero: '559', moradores:['Juliano', 'Karine']},
     {bairro: 'Santa Bárbara', rua: 'Lambari', numero: '559', moradores:['José', 'Marli']}
 ]
-
-module.exports = { residencias }
+module.exports = residencias 

@@ -2,9 +2,9 @@ const residencias = require('./residencias');
 
 function listar(){
     residencias.forEach((residencia, index) => {
-        console.log(`${index+1}, Nome: ${residencia.nome}, Telefone: ${residencia.telefone}, Email: ${residencia.telefone}, Moradores: ${residencia.moradores}`)
+        console.log(`${index+1}, Bairro: ${residencia.bairro}, Rua: ${residencia.rua}, Email: ${residencia.numero}, Moradores: ${residencia.moradores}`)
     });
 
 }
 
-module.exports = { listar }
+module.exports = listar

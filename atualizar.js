@@ -1,7 +1,8 @@
-const { listar } = require("./listar");
+
+const { residencias } = require("./residencias");
 
 function editar(index, novaResidencia){
-    contatos[index] = novaResidencia
+    residencias[index] = novaResidencia
 }
 
-module.exports = { editar }
+module.exports = editar

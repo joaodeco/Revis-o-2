@@ -22,11 +22,10 @@ function menu(){
             menu()
             break
         case '2':
-            adicionar()
             const bairro = prompt('Bairro: ');
             const rua = prompt('Rua: ');
             const  numero= prompt('Número: ');
-            adicionarContato({bairro, rua, numero});
+            adicionar({bairro, rua, numero});
             console.log('Residencia adicionada com sucesso!');
             menu()
             break
@@ -36,9 +35,9 @@ function menu(){
             index = parseInt(prompt('Número da residencia que deseja remover: ')) - 1;
             remover(index);
             console.log('Residencia removida com sucesso!');
+            menu()
             break
         case '4':
-            atualizar()
             listar();
             index = parseInt(prompt('Número da residencia atualizar: ')) - 1;
             const novoBairro = prompt('Novo nome: ');

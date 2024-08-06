@@ -1,7 +1,7 @@
-let listar  = require("./listar")
 
 function remover(index){
-    contatos.splice(index, 1)
+    const residencias = require('./residencias');
+    residencias.splice(index, 1)
 }
 
-module.exports = { remover }
+module.exports = remover
